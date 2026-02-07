@@ -71,6 +71,11 @@ block_transclusion_length = "Full"
 # Enables autocompleting by heading but inserting link to filename (instead of filename + heading)
 # Useful for unique notes / Zettelkasten users
 link_filenames_only = false
+
+# Complete paths as relative to vault
+# If disabled, vault/subdir/file.md completed as [[file]]
+# If enabled, it completes as [[subdir/file]]
+complete_paths_as_relative_to_vault = false
 ```
 
 # Daily Note Format Config Option

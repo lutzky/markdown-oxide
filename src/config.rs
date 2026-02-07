@@ -28,6 +28,7 @@ pub struct Settings {
     pub block_transclusion: bool,
     pub block_transclusion_length: EmbeddedBlockTransclusionLength,
     pub link_filenames_only: bool,
+    pub complete_paths_as_relative_to_vault: bool,
 }
 
 #[derive(Clone, Debug, Deserialize)]
@@ -96,6 +97,7 @@ impl Settings {
                 }),
             )?
             .set_default("link_filenames_only", false)?
+            .set_default("complete_paths_as_relative_to_vault", false)?
             .build()
             .map_err(|err| anyhow!("Build err: {err}"))?;
 
